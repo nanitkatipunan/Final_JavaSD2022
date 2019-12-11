@@ -24,7 +24,7 @@ public class JViewMed extends javax.swing.JFrame {
 //        this.setTitle("View Medicines");
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connectionToDB = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/luciferpharmacy", "root", "");
+            Connection connectionToDB = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/finaljava", "root", "");
             PreparedStatement preparedStatement = connectionToDB.prepareStatement("SELECT * FROM `medicine`");
             ResultSet resultSetForFullTable = preparedStatement.executeQuery();
             DefaultTableModel tm = (DefaultTableModel) viewMedTable.getModel();
@@ -57,15 +57,17 @@ public class JViewMed extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 160, 122));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel1.setForeground(new java.awt.Color(204, 204, 255));
 
-        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel2.setBackground(new java.awt.Color(153, 153, 255));
 
         jLabel1.setBackground(new java.awt.Color(255, 140, 0));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 140, 0));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("View Medicine");
 
+        jButton2.setBackground(new java.awt.Color(153, 153, 255));
         jButton2.setText("Back");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

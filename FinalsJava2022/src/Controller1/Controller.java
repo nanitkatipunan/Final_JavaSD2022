@@ -26,9 +26,9 @@ public class Controller {
         if (user.length() > 0 && pass.length() >= 8 && fname.length() > 0 && lname.length() > 0) {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
-                Connection con = DriverManager.getConnection("jdbc:mysql://localhost/luciferpharmacy", "root", "");
+                Connection con = DriverManager.getConnection("jdbc:mysql://localhost/finaljava", "root", "");
                 Statement stmt = con.createStatement();
-                ResultSet rs = stmt.executeQuery("SELECT * FROM `account` WHERE username='" + user + "'");
+                ResultSet rs = stmt.executeQuery("SELECT * FROM `user` WHERE username='" + user + "'");
                 if (rs.next()) {
                     JOptionPane.showMessageDialog(r, "Username is already taken!", "Error", JOptionPane.ERROR_MESSAGE);
                 } else {
@@ -66,7 +66,7 @@ public class Controller {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/luciferpharmacy", "root", "");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/finaljava", "root", "");
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM `medicine` WHERE name='" + name + "'");
 
@@ -110,7 +110,7 @@ public class Controller {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/luciferpharmacy", "root", "");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/finaljava", "root", "");
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM `medicine` WHERE Id='" + ID + "'");
 
@@ -145,7 +145,7 @@ public class Controller {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/luciferpharmacy", "root", "");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/finaljava", "root", "");
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM `medicine` WHERE `Id`=" + ID);
 
@@ -221,7 +221,7 @@ public class Controller {
                 int id = Integer.parseInt(id2);
                 try {
                     Class.forName("com.mysql.jdbc.Driver");
-                    Connection con = DriverManager.getConnection("jdbc:mysql://localhost/luciferpharmacy", "root", "");
+                    Connection con = DriverManager.getConnection("jdbc:mysql://localhost/finaljava", "root", "");
                     Statement stmt = con.createStatement();
                     ResultSet rs = stmt.executeQuery("SELECT * FROM `medicine` WHERE id='" + id + "'");
 

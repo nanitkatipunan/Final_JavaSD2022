@@ -22,9 +22,9 @@ public class Model {
         try {
             Statement stmt = null;
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/luciferpharmacy", "root", "");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/finaljava", "root", "");
             stmt = con.createStatement();
-            String sql = "INSERT INTO `account`(`username`, `lname`, `fname`, `password`, `age`) VALUES ('" + user + "','" + lname + "','" + fname + "','" + pass + "'," + age + ")";
+            String sql = "INSERT INTO `user`(`username`, `lname`, `fname`, `password`, `age`) VALUES ('" + user + "','" + lname + "','" + fname + "','" + pass + "'," + age + ")";
             stmt.executeUpdate(sql);
             con.close();
             success = true;
@@ -40,7 +40,7 @@ public class Model {
         boolean loggedIn = false;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/luciferpharmacy", "root", "");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/finaljava", "root", "");
             java.sql.Statement stmt = con.createStatement();
             ResultSet rs1 = stmt.executeQuery("SELECT * FROM `admin` where username = '" + username + "' and password = '" + password + "'");
 
@@ -48,11 +48,11 @@ public class Model {
                 loggedIn = true;
                 return success = 500;
             } else {
-                ResultSet rs = stmt.executeQuery("SELECT * FROM `account` where username = '" + username + "'");
+                ResultSet rs = stmt.executeQuery("SELECT * FROM `user` where username = '" + username + "'");
                 if (rs.next()) {
                     if (rs.getString("password").equals(password)) {
                         loggedIn = true;
-                        return success = 600;
+                        return success =  600;
                     }
                 }
             }
@@ -71,7 +71,7 @@ public class Model {
         boolean success = false;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/luciferpharmacy", "root", "");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/finaljava", "root", "");
             Statement stmt = con.createStatement();
             String sql = "INSERT INTO `medicine`( `name`, `bname`, `gname`, `type`, `price`, `stock`) VALUES ('" + name + "','" + bname + "','" + gname + "','" + type + "','" + price + "'," + stock + ")";
             stmt.executeUpdate(sql);
@@ -87,7 +87,7 @@ public class Model {
         boolean success = false;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/luciferpharmacy", "root", "");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/finaljava", "root", "");
             Statement stmt = con.createStatement();
             String sql = "DELETE FROM `medicine` WHERE Id='" + ID + "'";
             stmt.executeUpdate(sql);
@@ -104,7 +104,7 @@ public class Model {
         boolean success = false;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/luciferpharmacy", "root", "");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/finaljava", "root", "");
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM `medicine` WHERE id=" + id);
             System.out.println("nakasulod");

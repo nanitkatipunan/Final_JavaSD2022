@@ -55,13 +55,13 @@ public class JAdminUpd extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 160, 122));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
-        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel2.setBackground(new java.awt.Color(153, 153, 255));
 
         jLabel1.setBackground(new java.awt.Color(255, 140, 0));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 140, 0));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("UPDATE MEDICINE");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -120,6 +120,7 @@ public class JAdminUpd extends javax.swing.JFrame {
             }
         });
 
+        back.setBackground(new java.awt.Color(153, 153, 255));
         back.setText("BACK");
         back.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -127,6 +128,7 @@ public class JAdminUpd extends javax.swing.JFrame {
             }
         });
 
+        update.setBackground(new java.awt.Color(153, 153, 255));
         update.setText("UPDATE");
         update.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -258,9 +260,9 @@ public class JAdminUpd extends javax.swing.JFrame {
             int newId = Integer.parseInt(ID);
             Statement stmt = null;
             try {
-
+              
                 Class.forName("com.mysql.jdbc.Driver");
-                Connection con = DriverManager.getConnection("jdbc:mysql://localhost/luciferpharmacy", "root", "");
+                Connection con = DriverManager.getConnection("jdbc:mysql://localhost/finaljava", "root", "");
                 stmt = con.createStatement();
                 ResultSet rs = stmt.executeQuery("SELECT * FROM `medicine` WHERE `Id`=" + ID);
 

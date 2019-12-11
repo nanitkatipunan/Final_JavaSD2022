@@ -44,13 +44,13 @@ public class JAdminRem extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 160, 122));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
-        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel2.setBackground(new java.awt.Color(153, 153, 255));
 
         jLabel1.setBackground(new java.awt.Color(255, 140, 0));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 140, 0));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("REMOVE MEDICINE");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -181,38 +181,7 @@ public class JAdminRem extends javax.swing.JFrame {
             this.setVisible(true);
         }
 
-//        try {
-//            int newId = Integer.parseInt(ID);
-//            Statement stmt = null;
-//            try {
-//                Class.forName("com.mysql.jdbc.Driver");
-//                Connection con = DriverManager.getConnection("jdbc:mysql://localhost/luciferpharmacy", "root", "");
-//                stmt = con.createStatement();
-//                ResultSet rs = stmt.executeQuery("SELECT * FROM `medicine` WHERE `Id`=" + ID);
-//                System.out.println("cxoonectedfs");
-//                if (rs.next()) {
-//                    System.out.println("Successfully connected");
-//                        if (newId > 0) {
-//                            String sql = "DELETE FROM `medicine` WHERE `Id`=" + ID;
-//                            stmt.executeUpdate(sql);
-//                            JOptionPane.showMessageDialog(rootPane, "Medicine Remove Successfully");
-//                            JViewMed view = new JViewMed();
-//                            view.setVisible(true);
-//                            this.setVisible(false);
-//                            con.close();
-//                        } else {
-//                            JOptionPane.showMessageDialog(rootPane, "Number less than zero is not valid", "Error", JOptionPane.ERROR_MESSAGE);
-//                        }
-//                    con.close();
-//                } else {
-//                    JOptionPane.showMessageDialog(rootPane, "Medicine ID number is not in the List", "Error", JOptionPane.ERROR_MESSAGE);
-//                }
-//            } catch (HeadlessException | ClassNotFoundException | SQLException e) {
-//                System.out.println(e);
-//            }
-//        } catch (NumberFormatException e) {
-//            JOptionPane.showMessageDialog(rootPane, "ID must be a number!", "Error", JOptionPane.ERROR_MESSAGE);
-//        }
+
     }//GEN-LAST:event_removeMouseClicked
 
     /**

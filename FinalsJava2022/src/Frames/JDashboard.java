@@ -39,13 +39,13 @@ public class JDashboard extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 160, 122));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
-        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel2.setBackground(new java.awt.Color(153, 153, 255));
 
         dashMunu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "MENU", "Allergies Medicine", "Body Pain Medicine", "Headache Medicine" }));
 
-        dashSearch.setBackground(new java.awt.Color(0, 0, 255));
+        dashSearch.setBackground(new java.awt.Color(153, 153, 255));
         dashSearch.setText("Search");
 
         dashSignOut.setBackground(new java.awt.Color(255, 0, 0));

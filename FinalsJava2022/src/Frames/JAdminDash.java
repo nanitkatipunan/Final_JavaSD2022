@@ -41,13 +41,13 @@ public class JAdminDash extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 160, 122));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
-        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel2.setBackground(new java.awt.Color(153, 153, 255));
 
         jLabel1.setBackground(new java.awt.Color(255, 140, 0));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 140, 0));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("ADMIN");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -67,6 +67,7 @@ public class JAdminDash extends javax.swing.JFrame {
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
+        updmed.setBackground(new java.awt.Color(153, 153, 255));
         updmed.setText("Update Medicine");
         updmed.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -79,6 +80,7 @@ public class JAdminDash extends javax.swing.JFrame {
             }
         });
 
+        addmed.setBackground(new java.awt.Color(153, 153, 255));
         addmed.setText("Add Medicine");
         addmed.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -86,6 +88,7 @@ public class JAdminDash extends javax.swing.JFrame {
             }
         });
 
+        delmed.setBackground(new java.awt.Color(153, 153, 255));
         delmed.setText("Delete Medicine");
         delmed.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -98,6 +101,7 @@ public class JAdminDash extends javax.swing.JFrame {
             }
         });
 
+        logout.setBackground(new java.awt.Color(153, 153, 255));
         logout.setText("Log Out");
         logout.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -105,6 +109,7 @@ public class JAdminDash extends javax.swing.JFrame {
             }
         });
 
+        viewMed.setBackground(new java.awt.Color(153, 153, 255));
         viewMed.setText("View Medicine");
         viewMed.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

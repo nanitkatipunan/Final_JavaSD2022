@@ -95,15 +95,16 @@ public class JCustoDash extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        cView.setBackground(new java.awt.Color(255, 160, 122));
+        cView.setBackground(new java.awt.Color(204, 204, 255));
 
-        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel2.setBackground(new java.awt.Color(153, 153, 255));
 
         jLabel1.setBackground(new java.awt.Color(255, 140, 0));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 140, 0));
-        jLabel1.setText("Lucifer Pharmacy");
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("K PHARMACY");
 
+        signout.setBackground(new java.awt.Color(153, 153, 255));
         signout.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         signout.setText("Sign Out");
         signout.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -122,9 +123,9 @@ public class JCustoDash extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(145, 145, 145)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(179, 179, 179)
                 .addComponent(signout, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(39, 39, 39))
         );
@@ -172,6 +173,7 @@ public class JCustoDash extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel7.setText("Enter the quantity of Medicine");
 
+        addO.setBackground(new java.awt.Color(153, 153, 255));
         addO.setText("Add ");
         addO.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
